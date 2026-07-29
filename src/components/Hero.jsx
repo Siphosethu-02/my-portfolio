@@ -1,25 +1,43 @@
 import profile from "../assets/profile.jpg";
-import { FaGithub, FaLinkedin, FaDownload } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
 
 function Hero() {
   return (
-    <section id="home" className="hero" data-aos="fade-up">
-      <div className="hero-text">
-        <h1>Hi, I'm Siphosethu Dlamini 👋</h1>
+    <section id="home" className="hero">
 
-        <h2>Computer Systems Engineering Student</h2>
+      <div className="hero-text">
+
+        <h1>Hi, I'm Siphosethu Dlamini</h1>
+
+        <TypeAnimation
+          sequence={[
+            "Computer Systems Engineering Student",
+            2000,
+            "AI Agent Developer",
+            2000,
+            "Software Developer",
+            2000,
+            "Python & React Developer",
+            2000,
+            "OpenCV Enthusiast",
+            2000,
+          ]}
+          wrapper="h2"
+          speed={50}
+          repeat={Infinity}
+          className="typing"
+        />
 
         <p>
-          Passionate about Software Development, Artificial Intelligence,
-          Full Stack Development, and building real-world applications using
-          Python, React, Flask, and modern technologies.
+          I build intelligent software solutions using Python, React,
+          Flask and Artificial Intelligence.
+          Passionate about solving real-world problems through technology.
         </p>
 
         <div className="hero-buttons">
+
           <a href="/SiphosethuCV.pdf" download>
-            <button>
-              <FaDownload /> Download CV
-            </button>
+            <button>Download CV</button>
           </a>
 
           <a
@@ -27,9 +45,7 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
           >
-            <button>
-              <FaGithub /> GitHub
-            </button>
+            <button>GitHub</button>
           </a>
 
           <a
@@ -37,16 +53,17 @@ function Hero() {
             target="_blank"
             rel="noreferrer"
           >
-            <button>
-              <FaLinkedin /> LinkedIn
-            </button>
+            <button>LinkedIn</button>
           </a>
+
         </div>
+
       </div>
 
       <div className="hero-image">
         <img src={profile} alt="Siphosethu Dlamini" />
       </div>
+
     </section>
   );
 }
