@@ -26,9 +26,9 @@ function ParticleBackground() {
         fpsLimit: 60,
 
         particles: {
-          number: {
-            value: 60,
-          },
+            number: {
+            value: 120,
+            },
 
           color: {
             value: "#38bdf8",
@@ -46,13 +46,13 @@ function ParticleBackground() {
             speed: 1,
           },
 
-          opacity: {
-            value: 0.5,
-          },
+            opacity: {
+            value: 0.8,
+            },
 
-          size: {
-            value: 3,
-          },
+            size: {
+            value: 4,
+            },
         },
       }}
     />
