@@ -1,16 +1,23 @@
-import { useCallback } from "react";
-import Particles from "@tsparticles/react";
+import { useEffect, useState } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 function ParticleBackground() {
-  const particlesInit = useCallback(async (engine) => {
-    await loadSlim(engine);
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    initParticlesEngine(async (engine) => {
+      await loadSlim(engine);
+    }).then(() => {
+      setInit(true);
+    });
   }, []);
+
+  if (!init) return null;
 
   return (
     <Particles
       id="particles"
-      init={particlesInit}
       options={{
         fullScreen: {
           enable: true,
@@ -25,10 +32,34 @@ function ParticleBackground() {
 
         fpsLimit: 60,
 
-        particles: {
-            number: {
-            value: 120,
+        interactivity: {
+          events: {
+            onHover: {
+              enable: true,
+              mode: "grab",
             },
+            onClick: {
+              enable: true,
+              mode: "push",
+            },
+          },
+          modes: {
+            grab: {
+              distance: 180,
+              links: {
+                opacity: 0.8,
+              },
+            },
+            push: {
+              quantity: 4,
+            },
+          },
+        },
+
+        particles: {
+          number: {
+            value: 80,
+          },
 
           color: {
             value: "#38bdf8",
@@ -38,21 +69,21 @@ function ParticleBackground() {
             enable: true,
             color: "#38bdf8",
             distance: 150,
-            opacity: 0.3,
+            opacity: 0.4,
           },
 
           move: {
             enable: true,
-            speed: 1,
+            speed: 1.5,
           },
 
-            opacity: {
-            value: 0.8,
-            },
+          opacity: {
+            value: 0.6,
+          },
 
-            size: {
-            value: 4,
-            },
+          size: {
+            value: { min: 2, max: 4 },
+          },
         },
       }}
     />
