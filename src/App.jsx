@@ -1,3 +1,4 @@
+import ParticleBackground from "./components/ParticleBackground";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -8,11 +9,13 @@ import Contact from "./components/Contact";
 import ThemeToggle from "./components/ThemeToggle";
 import Achievements from "./components/Achievements";
 
+
 import "./App.css";
 
 function App() {
   return (
     <>
+      <ParticleBackground />
       <Navbar />
       <Hero />
       <About />
