@@ -13,8 +13,8 @@ function ParticleBackground() {
       init={particlesInit}
       options={{
         fullScreen: {
-          enable: true,
-          zIndex: -1,
+        enable: true,
+        zIndex: 0,
         },
         background: {
           color: {
