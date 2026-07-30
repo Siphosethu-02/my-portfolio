@@ -1,37 +1,27 @@
-import { useEffect, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { useCallback } from "react";
+import Particles from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 function ParticleBackground() {
-  const [init, setInit] = useState(false);
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => {
-      setInit(true);
-    });
+  const particlesInit = useCallback(async (engine) => {
+    await loadSlim(engine);
   }, []);
-
-  if (!init) return null;
 
   return (
     <Particles
       id="particles"
+      init={particlesInit}
       options={{
         fullScreen: {
           enable: true,
           zIndex: -1,
         },
-
         background: {
           color: {
             value: "transparent",
           },
         },
-
         fpsLimit: 60,
-
         interactivity: {
           events: {
             onHover: {
@@ -45,9 +35,9 @@ function ParticleBackground() {
           },
           modes: {
             grab: {
-              distance: 180,
+              distance: 150,
               links: {
-                opacity: 0.8,
+                opacity: 0.5,
               },
             },
             push: {
@@ -55,32 +45,26 @@ function ParticleBackground() {
             },
           },
         },
-
         particles: {
           number: {
             value: 80,
           },
-
           color: {
             value: "#38bdf8",
           },
-
           links: {
             enable: true,
             color: "#38bdf8",
             distance: 150,
-            opacity: 0.4,
+            opacity: 0.3,
           },
-
           move: {
             enable: true,
             speed: 1.5,
           },
-
           opacity: {
             value: 0.6,
           },
-
           size: {
             value: { min: 2, max: 4 },
           },
