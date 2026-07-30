@@ -339,10 +339,9 @@ nav li:hover {
     max-width: 100%;
   }
 
-  .hero h1 {
-    font-size: 38px;
-  }
-
+.hero h1 {
+    color: white;
+}
   .hero h2 {
     font-size: 22px;
   }

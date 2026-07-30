@@ -10,22 +10,22 @@ function Hero() {
         <h1>Hi, I'm Siphosethu Dlamini</h1>
 
         <TypeAnimation
-          sequence={[
+        sequence={[
             "Computer Systems Engineering Student",
-            2000,
-            "AI Agent Developer",
             2000,
             "Software Developer",
             2000,
+            "AI Agent Developer",
+            2000,
             "Python & React Developer",
             2000,
-            "OpenCV Enthusiast",
+            "OpenCV & Computer Vision Enthusiast",
             2000,
-          ]}
-          wrapper="h2"
-          speed={50}
-          repeat={Infinity}
-          className="typing"
+        ]}
+        wrapper="h2"
+        speed={50}
+        repeat={Infinity}
+        className="typing"
         />
 
         <p>
