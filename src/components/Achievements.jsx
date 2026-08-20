@@ -1,34 +1,37 @@
-function AcademicAchievements() {
+function Achievements() {
   const achievements = [
     {
-      title: "Top Academic Achiever (ICT Faculty)",
+      icon: "🥇",
+      title: "Top Academic Achiever — ICT Faculty",
       year: "2024",
-      description: "Recognized as a top performing student across the ICT faculty.",
-      icon: "🥇"
+      description: "Recognised as the highest performing student across the ICT faculty at TUT.",
     },
     {
+      icon: "🎓",
       title: "Diploma in Computer Systems Engineering",
-      year: "Current",
-      description: "Tshwane University of Technology (TUT)",
-      icon: "🎓"
+      year: "In Progress",
+      description: "Currently studying at Tshwane University of Technology, targeting Cum Laude.",
     },
     {
+      icon: "⭐",
       title: "11 Distinctions Earned",
       year: "Academic Record",
-      description: "Consistently maintaining high academic excellence across core engineering subjects.",
-      icon: "⭐"
+      description: "Consistently achieving distinctions across core engineering and computing subjects.",
     },
     {
+      icon: "📈",
       title: "72% Current Average",
       year: "Target: Cum Laude 🎯",
-      description: "Actively working towards graduating with distinction.",
-      icon: "📈"
-    }
+      description: "Actively working towards graduating with distinction and maintaining a strong academic record.",
+    },
   ];
 
   return (
-    <section id="achievements" className="achievements-section">
-      <h2 className="section-title">Academic Achievements 🏆</h2>
+    <section id="achievements" className="achievements-section" data-aos="zoom-in">
+      <span className="section-label">Achievements</span>
+      <h2 className="section-title">Academic Highlights</h2>
+      <div className="section-divider" />
+
       <div className="achievements-grid">
         {achievements.map((item, index) => (
           <div key={index} className="achievement-card">
@@ -45,4 +48,4 @@ function AcademicAchievements() {
   );
 }
 
-export default AcademicAchievements;
+export default Achievements;
