@@ -10,20 +10,22 @@ function Projects() {
       problem:
         "Paper-based health records and disconnected clinic departments cause patient scheduling conflicts, slow triage, inventory inaccuracies, delayed billing, and high administrative overhead.",
       solution:
-        "Architected a scalable multi-tier web platform with React + Vite and Node.js/Express backed by MySQL, implementing JWT-based Role-Based Access Control (RBAC) across 6 clinical and administrative staff roles.",
+        "Architected a multi-tier web platform with React + Vite and Node.js/Express backed by MySQL with JWT-based Role-Based Access Control (RBAC) across 6 staff roles, then migrated it to a serverless Firebase stack (Authentication, Cloud Firestore with Security Rules, Hosting) so it runs live on a free tier.",
       technologies: [
         "React",
         "Vite",
+        "Firebase Auth",
+        "Cloud Firestore",
+        "Firebase Hosting",
         "Node.js",
         "Express",
         "MySQL",
-        "JWT Auth",
         "RBAC",
         "Docker",
-        "Docker Compose",
       ],
       features: [
         "Role-Based Access Control (RBAC) for Admin, Doctors, Nurses, Pharmacists, Lab Technicians, and Receptionists",
+        "Patient self sign-up and a patient portal for booking appointments and viewing prescriptions, records, and lab results",
         "Patient registration, admission history, vitals monitoring, and longitudinal medical records",
         "Doctor availability schedules, automated appointment booking, and consultation queues",
         "Pharmacy inventory tracking with automatic low-stock alerts, expiration tracking, and prescription dispensing",
@@ -32,8 +34,8 @@ function Projects() {
         "Analytics dashboard with bed occupancy metrics, revenue figures, and exportable PDF executive reports",
         "Full containerization via Docker and Docker Compose for single-command local and production deployment",
       ],
-      github: "https://github.com/Siphosethu-02",
-      live: "https://hospital-management-syst-3c936.web.app",
+      github: "https://github.com/Siphosethu-02/hospital-management-system",
+      live: "https://medicare-hms-18.web.app",
     },
     {
       title: "UniAgent — AI University Student Agent Platform",
